@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "API server of KS-System Edu project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "samcn26@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1",
+    "passport": "^0.4.1"
+  }
+}
