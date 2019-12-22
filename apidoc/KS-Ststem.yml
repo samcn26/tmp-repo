@@ -97,7 +97,7 @@ paths:
                 $ref: '#/components/schemas/User'
         400:
           description: Invalid email               
-  /user/{userId}:
+  /user/{userID}:
     put:
       tags:
         - user
@@ -105,7 +105,7 @@ paths:
       description: Only admin user can update user name or operate the user form in the system
       operationId: updateUser
       parameters:
-      - name: userId
+      - name: userID
         in: path
         required: true
         description: ID for user
@@ -139,7 +139,7 @@ paths:
       summary: Delete user
       operationId: deleteUser
       parameters:
-      - name: userId
+      - name: userID
         in: path
         description: ID of the user
         required: true
@@ -160,7 +160,7 @@ paths:
       operationId: batchDeleteUser
       parameters:
       - in: query
-        name: userIds
+        name: userIDs
         schema:
           type: array
           items:
