@@ -7,6 +7,7 @@ const app = express()
 const port = 3000
 
 
+
 // user body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -20,7 +21,11 @@ mongoose.connect(db,
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
+// import routes
+const user = require('./routes/user')
 
+// Use routes
+app.use('/api/user',user)
 
 app.get('/user', (req, res) => {
     const newUser = new User({
